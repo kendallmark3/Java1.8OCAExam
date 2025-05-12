@@ -36,3 +36,35 @@ The instructions are clearer about navigating to the correct directories for bot
 Using the fully qualified name (e.g., `com.udemy.oca.Oca`) when running the Java command ensures that the Java Virtual Machine (JVM) can correctly locate your compiled class files based on their package structure.
 
 Let me know if you have any other steps you'd like me to refine!
+
+
+New Machine
+
+Okay, that explains the "file not found" error. If LoopsDemo.java is at the root of markkendall@C02FGA47MD6N Java1.8OCAExam, but it belongs to the com.udemy.oca package, you need to compile it in a way that respects the package structure for the resulting .class file.
+
+From the markkendall@C02FGA47MD6N Java1.8OCAExam directory, you should use the following command:
+
+Bash
+
+javac -d . LoopsDemo.java
+Let's break down this command:
+
+javac: This is the Java compiler.
+-d .: This option tells the compiler where to place the generated .class file(s). The . specifies the current directory. The compiler will automatically create the com/udemy/oca directory structure under your current location if it doesn't exist and place the LoopsDemo.class file there.
+LoopsDemo.java: This is the source file you want to compile.
+
+
+Great! I'm glad that worked for compilation.
+
+Now, to run the compiled LoopsDemo class, you need to be in the directory that contains the root of your package structure, which is markkendall@C02FGA47MD6N Java1.8OCAExam in this case.
+
+From that directory, you would use the java command followed by the fully qualified name of your class (including the package name):
+
+Bash
+
+java com.udemy.oca.LoopsDemo
+So, the steps are:
+
+Make sure you are in the markkendall@C02FGA47MD6N Java1.8OCAExam directory in your terminal.
+Run the command: java com.udemy.oca.LoopsDemo
+Could you try that and let me know if it runs successfully?
